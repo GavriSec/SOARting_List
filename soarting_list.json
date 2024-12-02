@@ -1,0 +1,43 @@
+{
+    "create_time": "2024-12-02T05:32:25.722323+00:00",
+    "custom_function_id": "0fee37c06e615c35f827b30c2390b270cfcccd53",
+    "description": "This custom function is used to \"sort\" ingested/created containers to different labels by using a custom list in SOAR as a dictionary. The key in the dictionary is what you want to match on (i.e. a unique string in the container name or a field in an artifact) the value being the new label you want to change the container to.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [],
+            "description": "Input the NAME of the custom list you created that should be 2 columns wide; in the format of key and value pairs. \n\nThe key in the custom list column should be the string you want to match on in the \"key comparator\" datapath, such as part of a container name or a field in an artifact. The value should be the new label you want the container to change to.",
+            "input_type": "item",
+            "name": "custom_list",
+            "placeholder": "Custom List containing your key/labels"
+        },
+        {
+            "contains_type": [],
+            "description": "Input the datapath that the \"Key\" in your custom list will check against. (I.e. this can be the container name or a field in an artifact)",
+            "input_type": "item",
+            "name": "key_comparator",
+            "placeholder": "datapath to compare to the key string to"
+        },
+        {
+            "contains_type": [
+                "phantom container label"
+            ],
+            "description": "Input the default SOAR Label this custom function will output, in case sorting fails. ",
+            "input_type": "item",
+            "name": "default_label",
+            "placeholder": "default label in case sorting fails"
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "phantom container label"
+            ],
+            "data_path": "new_label",
+            "description": "This is the new Label that is output as a result of the sorting. If the sorting fails, it will be the default Label you specified as an input."
+        }
+    ],
+    "outputs_type": "item",
+    "platform_version": "6.3.0.718",
+    "python_version": "3"
+}
