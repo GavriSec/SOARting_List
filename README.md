@@ -6,8 +6,8 @@ This is especially useful with the limitation of only being able to define 1 lab
 
 Listed are both the .json and the .py files. If you want to upload it to your SOAR directly, you can download the .tgz file and upload it in your Custom Function menu!
 
-Hurricane Labs Blog Post: https://hurricanelabs.com/blog/splunk-soar-container-sorting-custom-function/
-In-Depth Tutorial: https://www.youtube.com/watch?v=d6oVcK2XWBY&ab_channel=HurricaneLabs
+- Hurricane Labs Blog Post: https://hurricanelabs.com/blog/splunk-soar-container-sorting-custom-function/
+- In-Depth Tutorial: https://www.youtube.com/watch?v=d6oVcK2XWBY&ab_channel=HurricaneLabs
 
 
 # SOAR 6.3.0 Known Issue:
