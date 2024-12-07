@@ -12,7 +12,7 @@ Listed are both the .json and the .py files. If you want to upload it to your SO
 
 # SOAR 6.3.0 Known Issue:
 
-**Edit:** I spoke with Splunk Support about this issue and they confirmed this is an issue with SOAR 6.3.0 when playbooks run after a label change, and has been fixed in SOAR 6.3.1. 
+**Edit:** I spoke with Splunk Support about this issue and they confirmed this is a bug with SOAR 6.3.0 when playbooks run after a label change, and has been fixed in SOAR 6.3.1. 
 I was given their internal engineering Jira case number PSAAS-19708 which mentions: "playbooks are executing before the playbook row in the database has been created, causing the eventual playbook record to remain in the pending state."
 
 ---
