@@ -6,9 +6,12 @@ This is especially useful with the limitation of only being able to define 1 lab
 
 Listed are both the .json and the .py files. If you want to upload it to your SOAR directly, you can download the .tgz file and upload it in your Custom Function menu!
 
-# SOAR 6.3+ Known Issues:
+# SOAR 6.3.0 Known Issue:
 
-I discovered a few issues with this custom function running in SOAR version 6.3 and above. My current guess is this is due to the change/new feature regarding python runner scaling (or a bug generated from that change). Here are some work arounds you can use to still have the SOARting_List do it's thing (I am also opening up a bug report case with Splunk).
+**Edit:** I spoke with Splunk Support about this issue and they confirmed this is an issue with SOAR 6.3.0 when playbooks run after a label change, and has been fixed in SOAR 6.3.1. 
+I was given their internal engineering Jira case number PSAAS-19708 which mentions: "playbooks are executing before the playbook row in the database has been created, causing the eventual playbook record to remain in the pending state."
+
+I discovered a few issues with this custom function running in SOAR version 6.3 and above. My current guess is this is due to the change/new feature regarding python runner scaling (or a bug generated from that change). Here are some work arounds you can use to still have the SOARting_List do it's thing - part of the time* (I am also opening up a bug report case with Splunk).
 
 1. Problem: If you are ingesting a large volume of containers through the On-Poll action of a SOAR app, the secondary playbook(s) will not run and enter a perpetual "pending" state (this can be seen in `Administration > System Health > Playbook Run History` and clicking `pending` in the `status` tab). 
 
