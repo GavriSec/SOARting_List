@@ -1,5 +1,5 @@
 {
-    "create_time": "2024-12-02T05:32:25.722323+00:00",
+    "create_time": "2024-12-07T03:20:03.763350+00:00",
     "custom_function_id": "0fee37c06e615c35f827b30c2390b270cfcccd53",
     "description": "This custom function is used to \"sort\" ingested/created containers to different labels by using a custom list in SOAR as a dictionary. The key in the dictionary is what you want to match on (i.e. a unique string in the container name or a field in an artifact) the value being the new label you want to change the container to.",
     "draft_mode": false,
