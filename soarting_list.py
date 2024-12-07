@@ -29,6 +29,8 @@ def soarting_list(custom_list=None, key_comparator=None, default_label=None, **k
     # Grab custom list specified by the <custom_list> input
     custom_list_api_call = phantom.get_list(list_name=custom_list, values=None, column_index=-1, trace=False)
     
+    phantom.debug(custom_list_api_call)
+    
     # Convert output to a dict
     key_plus_label_list = custom_list_api_call[2]
     key_plus_label_dict = {key.lower(): value for key, value in key_plus_label_list}
