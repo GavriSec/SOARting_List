@@ -63,7 +63,7 @@ def soarting_list(custom_list=None, key_comparator=None, default_label=None, **k
     
     # -------------------------------------
     # If you want to let this custom function automatically switch the label without having to use a second custom function in the playbook, uncomment this code:
-    phantom.set_label(label=output_label)
+    # phantom.set_label(label=output_label)
     # -------------------------------------
     
     # Return a JSON-serializable object
